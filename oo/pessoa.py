@@ -14,9 +14,14 @@ if __name__ == '__main__':
 
     print(Pessoa.cumprimentar(janezy))
     print(id(janezy))
+    print ( id ( jefferson ) )
     print(janezy.cumprimentar())
     print(janezy.nome)
     print(janezy.idade)
     for filho in janezy.filhos:
         print(filho.nome)
-
+    janezy.sobrenome = 'Castro'
+    print(janezy.sobrenome)
+    del jefferson.filhos
+    print(janezy.__dict__)
+    print ( jefferson.__dict__ )
