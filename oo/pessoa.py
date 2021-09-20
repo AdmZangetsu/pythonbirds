@@ -1,4 +1,5 @@
 class Pessoa:
+    olhos = 2 #atributo de classe ou default usado para quando todos os objetos terão o mesmo atributo (permite excessões)
     def __init__(self, *filhos, nome=None, idade=75):
         self.idade = idade
         self.nome = nome
@@ -23,5 +24,9 @@ if __name__ == '__main__':
     janezy.sobrenome = 'Castro'
     print(janezy.sobrenome)
     del jefferson.filhos
+    jefferson.olhos = 3
     print(janezy.__dict__)
     print ( jefferson.__dict__ )
+    print(Pessoa.olhos)
+    print(jefferson.olhos)
+    print(id(Pessoa.olhos), id(janezy.olhos), id(jefferson.olhos))
